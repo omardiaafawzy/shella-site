@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shella</title>
+<meta name="description" content="Shella is a student companion app for the New Alamein campuses: rides home, hangouts and a campus map.">
+<meta name="theme-color" content="#0B1622">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='360 -140 174 280'%3E%3Ccircle cx='447' cy='-74' r='44' fill='%23F0685A'/%3E%3Cpath d='M405 100L417 -70M489 100L477 -70' stroke='%2338E4BC' stroke-width='30' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ground: #0B1622;
+    --card: #142433;
+    --line: #1F3547;
+    --ink: #EAF2F7;
+    --muted: #9FB3C2;
+    --sea: #2DD4BF;
+    --sand: #FF7A59;
+    --letters: #38E4BC;
+    --dashes: #ECF3F8;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ground: #F3F7FA;
+      --card: #FFFFFF;
+      --line: #D6E2EA;
+      --ink: #0C1520;
+      --muted: #4A5D6B;
+      --sea: #0F766E;
+      --sand: #C2410C;
+      --letters: #0C1520;
+      --dashes: #F0685A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: Alexandria, system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 16px 40px; }
+  .logo { width: min(280px, 72vw); height: auto; display: block; }
+  h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 32px 0 12px;
+  }
+  .lead { color: var(--muted); font-size: 17px; margin: 0 0 32px; }
+  .cards { display: grid; gap: 12px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 18px 20px;
+  }
+  .card h2 { font-size: 17px; font-weight: 700; margin: 0 0 4px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .soon {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--sea);
+    color: var(--sea);
+    font-weight: 500;
+  }
+  .ar { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .ar h2 { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+  .ar p { color: var(--muted); margin: 0 0 8px; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 48px; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="logo" viewBox="-30 -140 714 280" role="img" aria-label="Shella">
+    <defs>
+      <mask id="stripes" maskUnits="userSpaceOnUse" x="-30" y="-140" width="714" height="280">
+        <rect x="-30" y="-140" width="714" height="280" fill="#fff"/>
+        <rect x="402.75" y="-66" width="88.5" height="4" fill="#000"/>
+        <rect x="406.8" y="-54" width="80.4" height="6" fill="#000"/>
+        <rect x="416.9" y="-41" width="60.2" height="8" fill="#000"/>
+      </mask>
+    </defs>
+    <circle cx="447" cy="-74" r="44" fill="#F0685A" mask="url(#stripes)"/>
+    <g fill="none" stroke="var(--letters)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M405 100L417 -70M489 100L477 -70"/>
+      <path d="M75 25A30 25 0 1 0 45 50A30 25 0 1 1 15 75"/>
+      <path d="M125 -70L125 100M125 100L125 40A40 40 0 0 1 205 40L205 100"/>
+      <path d="M255 50L355 50A50 50 0 1 0 340.36 85.36"/>
+      <path d="M589 0A50 50 0 1 0 589 100A50 50 0 1 0 589 0M639 0L639 100"/>
+    </g>
+    <g stroke="var(--dashes)" stroke-linecap="round">
+      <path d="M447 96L447 70" stroke-width="9"/>
+      <path d="M447 56L447 36" stroke-width="7"/>
+      <path d="M447 24L447 10" stroke-width="5"/>
+      <path d="M447 -1L447 -10" stroke-width="3.5"/>
+    </g>
+  </svg>
+
+  <h1>Your shella, far from home.</h1>
+  <p class="lead">Shella is a student app for the New Alamein campuses, starting with the AASTMT Alamein branch. It helps students get home together and find each other on campus.</p>
+
+  <div class="cards">
+    <section class="card">
+      <h2>Ride home</h2>
+      <p>Students going to Sidi Gaber, Alexandria, fill one 14-seat minibus together. The fare is 120 EGP a seat, paid to the driver in cash. Nothing is paid in the app.</p>
+    </section>
+    <section class="card">
+      <h2>Hangouts</h2>
+      <p>Join or start activities with other students: sports, the beach, study groups, food and trips.</p>
+    </section>
+    <section class="card">
+      <h2>Campus map</h2>
+      <p>See friends and hangouts on a map of New Alamein. Students choose who sees them, or hide completely.</p>
+    </section>
+    <section class="card">
+      <h2>For drivers</h2>
+      <p>When a minibus is full, Shella sends the assigned driver one WhatsApp message with the pickup time and place. Only drivers who agreed to it get these messages, and they never include students' details.</p>
+    </section>
+  </div>
+
+  <span class="soon">Coming soon to Google Play</span>
+
+  <section class="ar" lang="ar" dir="rtl">
+    <h2>شلة</h2>
+    <p>شلة تطبيق للطلبة في جامعات العلمين الجديدة، بادئين بالأكاديمية البحرية فرع العلمين.</p>
+    <p>روّح مع زمايلك في ميكروباص واحد لسيدي جابر بـ ١٢٠ جنيه للكرسي، تدفعهم للسواق كاش. واعرف الخروجات اللي حواليك وشوف صحابك على الخريطة.</p>
+    <p>قريبًا على Google Play.</p>
+  </section>
+
+  <footer>© 2026 Shella</footer>
+</main>
+</body>
+</html>
